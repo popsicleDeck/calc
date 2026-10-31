@@ -41,6 +41,9 @@ button {
   width: 200px;
   margin: auto;
 }
+.mathOperators {
+  display: inline;
+}
 .operators button {
   background-color: #e6c019;
 }

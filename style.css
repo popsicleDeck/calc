@@ -1,0 +1,46 @@
+html {
+  margin: 0px;
+  height: 100%;
+}
+body {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* flex-direction: center; */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+}
+.display {
+  width: 450px;
+  height: 200px;
+  border: 2px solid #242323;
+  border-radius: 10px;
+}
+.btns {
+  margin-top: 20px;
+  width: 230px;
+  height: 200px;
+}
+button {
+  box-sizing: border-box;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+  margin-right: 6px;
+}
+.operators,
+.nums {
+  width: 200px;
+  margin: auto;
+}
+.operators button {
+  background-color: #e6c019;
+}

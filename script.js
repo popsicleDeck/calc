@@ -14,14 +14,16 @@ let firstNum;
 let operator;
 let secondNum;
 
-nums.addEventListener("click", function (e) {
-  if (firstNum == undefined) {
-    firstNum = this.textContent;
-    display.textContent = firstNum;
-  } else {
-    secondNum = this.textContent;
-    display.textContent += secondNum;
-  }
+nums.forEach(function (elem) {
+  elem.addEventListener("click", function () {
+    if (firstNum == undefined) {
+      firstNum = this.textContent;
+      display.textContent = firstNum;
+    } else {
+      secondNum = this.textContent;
+      display.textContent += secondNum;
+    }
+  });
 });
 
 const operate = (operator, firstNum, secondNum) =>

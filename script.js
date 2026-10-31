@@ -1,9 +1,9 @@
-// let plus = Document.querySelector("#plus");
-// let minus = Document.querySelector("#minus");
-// let divide = Document.querySelector("#divide");
-// let times = Document.querySelector("#times");
-let display = Document.querySelector(".display");
-let nums = Document.querySelectorAll(".nums > button");
+// let plus = document.querySelector("#plus");
+// let minus = document.querySelector("#minus");
+// let divide = document.querySelector("#divide");
+// let times = document.querySelector("#times");
+let display = document.querySelector(".display");
+let nums = document.querySelectorAll(".nums > button");
 
 const add = (a, b) => a + b;
 const subtract = (a, b) => a - b;

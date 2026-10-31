@@ -44,3 +44,8 @@ button {
 .operators button {
   background-color: #e6c019;
 }
+#clear {
+  display: block;
+  width: 50px;
+  margin: auto;
+}

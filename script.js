@@ -39,17 +39,22 @@ const operate = (operator, a, b) => {
       console.log("Your mom is gay");
   }
 };
-
 mathOperators.forEach(function (elem) {
   elem.addEventListener("click", function () {
     if (operator === undefined) {
       operator = this.textContent;
       display.textContent += operator;
+      // console.log(
+      //   `1st: ${firstNum}, 2nd: ${secondNum}, operator: ${operator}, fsum: ${firstSum}`,
+      // );
     } else {
       firstSum = operate(operator, firstNum, secondNum);
       secondNum = "";
       operator = this.textContent;
       display.textContent += operator;
+      // console.log(
+      //   `1st: ${firstNum}, 2nd: ${secondNum}, operator: ${operator}, fsum: ${firstSum}`,
+      // );
     }
   });
 });
@@ -59,15 +64,28 @@ nums.forEach(function (elem) {
     if (operator === undefined) {
       firstNum += this.textContent;
       display.textContent = firstNum;
+      // console.log(
+      //   `1st: ${firstNum}, 2nd: ${secondNum}, operator: ${operator}, fsum: ${firstSum}`,
+      // );
     } else {
       secondNum += this.textContent;
       display.textContent += this.textContent;
+      // console.log(
+      //   `1st: ${firstNum}, 2nd: ${secondNum}, operator: ${operator}, fsum: ${firstSum}`,
+      // );
     }
   });
 });
 
 equal.addEventListener("click", () => {
-  display.textContent = operate(operator, firstSum, secondNum);
+  if (firstSum === undefined) {
+    display.textContent = operate(operator, firstNum, secondNum);
+  } else {
+    display.textContent = operate(operator, firstSum, secondNum);
+  }
+  // console.log(
+  //   `1st: ${firstNum}, 2nd: ${secondNum}, operator: ${operator}, fsum: ${firstSum}`,
+  // );
 });
 
 clear.addEventListener("click", () => {

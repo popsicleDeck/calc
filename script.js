@@ -17,18 +17,21 @@ let operator;
 let secondNum = "";
 
 const operate = (operator, a, b) => {
+  a = +a;
+  b = +b;
+
   switch (operator) {
     case "+":
-      add(a, b);
+      return add(a, b);
       break;
     case "-":
-      subtract(a, b);
+      return subtract(a, b);
       break;
     case "*":
-      multiply(a, b);
+      return multiply(a, b);
       break;
     case "/":
-      divide(a, b);
+      return divide(a, b);
       break;
     default:
       console.log("Your mom is gay");
@@ -39,7 +42,6 @@ mathOperators.forEach(function (elem) {
   elem.addEventListener("click", function () {
     operator = this.textContent;
     display.textContent += operator;
-    console.log(typeof operator);
   });
 });
 
@@ -53,4 +55,9 @@ nums.forEach(function (elem) {
       display.textContent += this.textContent;
     }
   });
+});
+
+equal.addEventListener("click", () => {
+  display.textContent = operate(operator, firstNum, secondNum);
+  // console.log(operate(operator, firstNum, secondNum));
 });

@@ -2,6 +2,7 @@
 // let minus = document.querySelector("#minus");
 // let divide = document.querySelector("#divide");
 // let times = document.querySelector("#times");
+let clear = document.querySelector("#clear");
 let mathOperators = document.querySelectorAll(".mathOperators > button");
 let equal = document.querySelector("#equal");
 let display = document.querySelector(".display");
@@ -16,8 +17,6 @@ let firstNum = "";
 let operator;
 let secondNum = "";
 let firstSum;
-
-console.log(operator);
 
 const operate = (operator, a, b) => {
   a = +a;
@@ -69,4 +68,12 @@ nums.forEach(function (elem) {
 
 equal.addEventListener("click", () => {
   display.textContent = operate(operator, firstSum, secondNum);
+});
+
+clear.addEventListener("click", () => {
+  firstNum = "";
+  operator;
+  secondNum = "";
+  firstSum;
+  display.textContent = "";
 });

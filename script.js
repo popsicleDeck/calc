@@ -1,7 +1,3 @@
-// let plus = document.querySelector("#plus");
-// let minus = document.querySelector("#minus");
-// let divide = document.querySelector("#divide");
-// let times = document.querySelector("#times");
 let clear = document.querySelector("#clear");
 let mathOperators = document.querySelectorAll(".mathOperators > button");
 let equal = document.querySelector("#equal");

@@ -33,6 +33,10 @@ const operate = (operator, a, b) => {
       return multiply(a, b);
       break;
     case "/":
+      if (b === 0) {
+        alert("Nuh uh, no division by 0 for you.");
+        break;
+      }
       return Math.round(divide(a, b) * 10) / 10;
       break;
     default:

@@ -15,6 +15,9 @@ const divide = (a, b) => a / b;
 let firstNum = "";
 let operator;
 let secondNum = "";
+let firstSum;
+
+console.log(operator);
 
 const operate = (operator, a, b) => {
   a = +a;
@@ -40,8 +43,15 @@ const operate = (operator, a, b) => {
 
 mathOperators.forEach(function (elem) {
   elem.addEventListener("click", function () {
-    operator = this.textContent;
-    display.textContent += operator;
+    if (operator === undefined) {
+      operator = this.textContent;
+      display.textContent += operator;
+    } else {
+      firstSum = operate(operator, firstNum, secondNum);
+      secondNum = "";
+      operator = this.textContent;
+      display.textContent += operator;
+    }
   });
 });
 
@@ -58,6 +68,5 @@ nums.forEach(function (elem) {
 });
 
 equal.addEventListener("click", () => {
-  display.textContent = operate(operator, firstNum, secondNum);
-  // console.log(operate(operator, firstNum, secondNum));
+  display.textContent = operate(operator, firstSum, secondNum);
 });

@@ -33,7 +33,7 @@ const operate = (operator, a, b) => {
       return multiply(a, b);
       break;
     case "/":
-      return divide(a, b);
+      return Math.round(divide(a, b) * 10) / 10;
       break;
     default:
       console.log("Your mom is gay");
